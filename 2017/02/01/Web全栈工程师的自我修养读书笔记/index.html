@@ -89,7 +89,631 @@
   <div class="article-content">
     <div class="entry">
       
-        
+        <p>一直以来有个梦想就是做一个全栈工程师，而且很喜欢开发Web，但是因为求学路上选择的原因和自身的不够努力，梦想就一直是梦想。2016年找好了一个工作，研究生阶段也就顺理成章的剩下了论文，虽然不是一挥而就的事情但是相对地有些时间来做自己的事情。某天在图书馆闲逛的时候，全栈的心思又进入了我的脑海了，信手一搜就找到了这本刚入库不久的余果先生的Web全栈工程师的自我修养，我想也许这是一种暗示，我该为这个梦想上路了，所以，读了这一本，下面是读书笔记：</p>
+<p>[TOC]</p>
+<a id="more"></a>
+<p>##Web全栈工程师的自我修养</p>
+<h3 id="什么是全栈？"><a href="#什么是全栈？" class="headerlink" title="什么是全栈？"></a>什么是全栈？</h3><blockquote>
+<p>栈：是一系列子模块的集合。这些软件子模块或组件组合在一起可实现既定功能，不再需要其他模块。</p>
+</blockquote>
+<p>我想作为一个全栈需要有自己实现产品需求的能力，将一个东西从无到有的做出来。</p>
+<blockquote>
+<p>Web栈：服务器（Nginx、Apache）、数据库(MySQL、MangoDB)、服务器端编程语言（Java、PHP、Python）、HTML、CSS、JavaScript</p>
+<p>APP栈：与Web栈类似，后端技术是是通用的，将前端部分换成iOS或者Android开发技术</p>
+<p>从能力和思维方式两方面来判定一个人是否是一个合格的全栈工程师</p>
+</blockquote>
+<p>全栈工程师需要能够一个人完成一个产品并且在舒适区之外工作的时候，敢于迎难而上，并成功的完成任务。作为一个全栈需要时刻准备着应对各种可能出现的挑战并能够克服之。</p>
+<blockquote>
+<p>全栈工程师是指：一个能处理数据库、服务器、系统工程和客户端的所有工作的工程师。根据项目的不同，客户需要的可能是移动站、Web栈或者原生应用程序栈。</p>
+</blockquote>
+<p>虽然全栈大包大揽，看似并不能够实现。但是从一个栈专注入手还是能够将这个全搭建起来的，虽然我之前一直做的是C++桌面程序开发，但是之后的日子我想从前端入手搭建属于自己的第一个全栈。</p>
+<h3 id="Web开发职位及流程介绍"><a href="#Web开发职位及流程介绍" class="headerlink" title="Web开发职位及流程介绍"></a>Web开发职位及流程介绍</h3><p><strong>产品经理</strong>：从头策划一个产品或者优化已有产品的一部分，从策划开始跟进到发布、是产品的灵魂人物之一。</p>
+<p><strong>用户研究员</strong>：研究用户的行为，既有宏观的数据分析也有微观的场景分析，召集用户开会或者静静地观察，输出用户研究报告给产品经理和交互设计师，我觉得这个是一个先行者的角色但是在大部分情况下估计是产品经理的工作</p>
+<p><strong>交互设计师</strong> ：研究用户界面的信息分布和操作流程，输出用户与界面交互过程的流程图以及描述信息的线框图给视觉设计师。</p>
+<p><strong>视觉设计师</strong> ：有时候与交互设计师并不分家，主要工作是根据交互设计师输出的线框图进行润色和设计，输出产品的最终视觉设计稿给前端工程师进行实现。</p>
+<p><strong>前端工程师</strong> ：页面的制作者，需要熟悉前端三驾马车、性能、语义化、多浏览器兼容、SEO、自动化工具等广泛知识。</p>
+<p><strong>后台工程师</strong> ：进行服务器功能的开发，技术选型比较自由，包括C#、C++、Java、PHP、ROR、Python等。出了开发还需要负责服务器的配置、调试，数据库的配置和管理。在大公司职位还会细分为后台工程师、运维工程师（服务器的配置和调试）、数据库管理员（DBA）等岗位。</p>
+<p><strong>运维工程师</strong> ：关注服务器的压力、成本、安全等信息</p>
+<p><strong>测试工程师</strong> ：测试产品的，对于全栈来说TDD也是一种不错的想法</p>
+<h4 id="专业工程师成长的几个问题"><a href="#专业工程师成长的几个问题" class="headerlink" title="专业工程师成长的几个问题"></a>专业工程师成长的几个问题</h4><blockquote>
+<p>缺乏主人感导致产品质量差，初级阶段可以多磨练技术，但是不要丧失了对于产品目标的把握</p>
+<p>缺乏全局的视野，高级工程师不仅仅是做好分内的工作，需要对设计的了解，对后台的了解，跨团队推进项目的能力，做一个“实践派”</p>
+</blockquote>
+<p>MEAN：全栈框架，包括MongoDB，面向文档、NoSQL类型的数据库，采用类似JSON的文档结构来存储数据。Express，Node.js框架能够灵活地创建Web服务。AngularJs，前端框架，致力于使用MVC模式来开发前端，使开发和测试交互的页面更加轻松。Node.js</p>
+<p>MEAN与LAMP，LAMP中并没有体现前端框架的应用</p>
+<h3 id="全栈工程师最好一专多长"><a href="#全栈工程师最好一专多长" class="headerlink" title="全栈工程师最好一专多长"></a>全栈工程师最好一专多长</h3><p>全栈工程师的首要目标是解决问题，不是醉心技术，我会用比我完全懂有意义。主动承担更多的责任，给公司带来更多的收益。<strong>DONE IS BETTER THAN PERFECT!</strong></p>
+<h3 id="如何成为全栈工程师"><a href="#如何成为全栈工程师" class="headerlink" title="如何成为全栈工程师"></a>如何成为全栈工程师</h3><blockquote>
+<p>先在一个方向上有比较深入的钻研，然后再将学习目标渐渐推广开来。比如从前端方向入手，了解了基本的三驾马车之后，不要急着转向服务端语言、或者App方向，而深入到性能优化、SEO、多种框架、响应式页面等前端细节中去，经过一两年的深入研究再学习其他方向</p>
+</blockquote>
+<p>说到底就是不要急于求成，学习的时候了解一个东西就要了解地深入一些，解决问题的时候DONE优先，不要死扣技术</p>
+<blockquote>
+<p>你需要在招聘要求的方向上以200%的能力来得到这个职位</p>
+</blockquote>
+<p><strong>面试官的问法是从经验问到操作过程、再问到技术原理一直深入下去直到面试官问不下去或者求职者答不上来，所以理解地越深刻越有优势。</strong></p>
+<p>全栈工程师考虑做什么项目时需要考虑到商业目标、帮老板赚钱。自己的知识体系可以复用</p>
+<blockquote>
+<p>对于商业和市场有想法，而且自己有足够的技术能力和自信想未来前进</p>
+<p>每一个糟糕的用户体验背后都蕴藏着商机</p>
+</blockquote>
+<p><strong>关注用户体验</strong>，关注每一个您为之服务的人。PPT的听众（他们要什么），邮件的收件人（你想让他知道什么），老板（选择题），尽量用流程化的方法解决问题，如果不行，就用工具搞定他。</p>
+<p><strong>大巧若拙</strong> ：真正聪明的人从来不显露自己，功夫花在背后，花在基础，花在真正有用的地方，不为炫技，不为虚名。</p>
+<p><strong>做自己会用的产品</strong> ：随时切换大师状态和小白状态</p>
+<blockquote>
+<p>全栈工程师三方面：一专多长、关注商业目标、关注用户体验</p>
+</blockquote>
+<h3 id="从学生到工程师"><a href="#从学生到工程师" class="headerlink" title="从学生到工程师"></a>从学生到工程师</h3><p>岗位优先于公司，不要在一个公司做自己不喜欢也不擅长的工作。首先还是要想清楚自己喜欢什么，但是从稻盛和夫的观点来说，只有去做了才知道自己是不是真的喜欢，或者让自己喜欢上。所以我觉得还是需要先钻研，好的是我的公司Morgan招聘的就是全栈，或许能够让我有所成长，当然我还是更想去腾讯。</p>
+<p>招聘过程中需要的是找对方法，在自己对于一个东西的理解之上做出一些实际有用的东西来，包括博客、作品以及公司实习</p>
+<blockquote>
+<ul>
+<li>首先确定自己的求职意向，根据特定的意向填写自己的简历</li>
+<li>表达自己的创意，不要使用标准的模块，我觉得可以使用自己设计的模板</li>
+<li>将简历发送到真正招人的主管那里（找项目组）</li>
+</ul>
+</blockquote>
+<p>作者十分推崇参加一个知名的开源项目，所以之后需要自己参加一个。</p>
+<p>实习和进公司的建议：</p>
+<blockquote>
+<ul>
+<li>记住团队里的每一个人（横向和纵向，不同部门之间）</li>
+<li>有任何问题，主动问导师</li>
+<li>主动介绍自己，告诉大家自己是新人，请多关照</li>
+<li>每周发邮件记录心得总结、经验教训、学习成长</li>
+<li>实习/工作结束，总结所有项目，给出交接文档，并向大家致谢</li>
+</ul>
+</blockquote>
+<h3 id="野生的程序员（需要引以为戒的东西）"><a href="#野生的程序员（需要引以为戒的东西）" class="headerlink" title="野生的程序员（需要引以为戒的东西）"></a>野生的程序员（需要引以为戒的东西）</h3><blockquote>
+<p>Web性能优化：</p>
+<ul>
+<li>压缩源码和图片：JavaScript混淆压缩、CSS普通压缩、JPG文件根据质量压缩、PNG将24色变为8色、去除PNG格式信息等</li>
+<li>选择合适的图片样式：颜色较多使用JPG，颜色较少使用PNG，如果能够通过服务器判断浏览器支持WebP，可以使用WebP和SVG格式</li>
+<li>合并静态资源：包括CSS、JavaScript和小图片，例如：雪碧图之类，较少Http请求数</li>
+<li>开启服务器端的Gzip压缩：对于文本压缩非常有效，对于图片压缩比率不大</li>
+<li>使用CDN，增加并发下载量，和其他网站共享缓存</li>
+<li>延长静态资源的缓存时间：需要通过修改文件名的方式（这个在介绍缓存的那一章有讲）</li>
+<li>把CSS放在页面的头部，把JavaScript放在页面的尾部：js不阻塞浏览器渲染，防止出现长时间页面空白</li>
+<li><strong>每一个条目都可以深挖下去</strong></li>
+</ul>
+</blockquote>
+<p>关注网络性能和HTTP请求协议</p>
+<p><strong>拒绝”知易行难”</strong> ：要去应用一些觉得不错的开发方式，遇到问题需要进行深入的了解和分析，例如例子中提出的CSS缓存问题</p>
+<p>大公司的垂直专精、最佳实践、软技能、人脉、心态</p>
+<h3 id="工程师事业指南：如何做一个不错的工程师"><a href="#工程师事业指南：如何做一个不错的工程师" class="headerlink" title="工程师事业指南：如何做一个不错的工程师"></a>工程师事业指南：如何做一个不错的工程师</h3><blockquote>
+<p>软件工程师的核心：技术、成长、声望</p>
+</blockquote>
+<p>那个什么都会的家伙并不一定什么都会，是日积月累的声望造就的。如果你每天能够完成的请求超过收到的请求，那么你就能够积累声望。每一个请求都有人会注意。所以当你不能完成的时候，<strong>正确的方法是：讲出事实</strong></p>
+<blockquote>
+<p>积累作品集</p>
+</blockquote>
+<p>如果使用得当，开源代码将是您和您的公司最好的广告，开源并宣传自己的作品</p>
+<blockquote>
+<p><strong>觉得自己的代码不够好而不开源，理由不成立</strong></p>
+</blockquote>
+<p><strong>每次签入代码的时候都比签出代码的时候好一些，那么这个代码库就会越来越好</strong></p>
+<p>擅长设计和编程的全栈工程师可以使用<strong>Dribble</strong> </p>
+<p>还可以使用静态页面加上github，我当前使用hexo在github上搭建了一个静态博客，是一个不错的开始。</p>
+<p><strong>突出重点</strong></p>
+<p>任何一个作品集都需要有一个重点。突出技能的深度就针对这个技能罗列出大量的作品。突出技能的广度就在github上提交相关技能的项目。</p>
+<p>花点时间做一些有趣的事情，突出自己的存在。</p>
+<h3 id="全栈工程师眼中的HTTP（互联网核心协议的解读）"><a href="#全栈工程师眼中的HTTP（互联网核心协议的解读）" class="headerlink" title="全栈工程师眼中的HTTP（互联网核心协议的解读）"></a>全栈工程师眼中的HTTP（互联网核心协议的解读）</h3><blockquote>
+<p>HTTP版本</p>
+<ul>
+<li>HTTP/1.1从1999年使用至今与HTTP/1相比，增加了缓存处理和持续连接（长连接）以及其他一些性能优化</li>
+<li>2015年2月，HTTP/2发布，重大更新：减小网络传输延迟，简化服务器向浏览器传输内容的过程，主流服务器和浏览器都支持，需要升级服务器版本</li>
+</ul>
+</blockquote>
+<p>HTTP示例</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">GET</span> <span class="string">/</span> HTTP/1.1</div><div class="line"><span class="attribute">Host:www.google.com</span></div></pre></td></tr></table></figure>
+<p>第一行指定方法、资源路径、协议版本，上例是简化之后的情况，实际使用中还会有cookie，HTTPS头，浏览器接受何种类型的压缩格式和UA（User-Agent，表示用户正在使用什么样的代理访问网站，最常见的是浏览器）代码</p>
+<p>服务器应答如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">HTTP/1.1 200 OK</div><div class="line">Content-Length:3059</div><div class="line">Server:GWS/2.0</div><div class="line">Date:Mon,20 Apr 2015 20:30:45 GMT</div><div class="line">Content-Type: text/html</div><div class="line">Cache-control: private</div><div class="line">Set-cookie: PREF=ID=73d4aef52e57bae9;expires=Sun,17-Jan-2038 19:14:07 GMT;path=/;domain=.google.com</div><div class="line">Connection:keep-alive</div></pre></td></tr></table></figure>
+<p><strong>需要搞清楚HTTP请求和HTTP返回的各个属性、意义以及用法</strong></p>
+<p>在返回头之后有一个空行，然后是HTML格式的Google主页</p>
+<h4 id="前端视角"><a href="#前端视角" class="headerlink" title="前端视角"></a>前端视角</h4><p>前端可以使用Http Watch或者Chrome调试观察打开网站时候的请求细节，包括：</p>
+<blockquote>
+<ul>
+<li>发出的请求列表</li>
+<li>每个请求的开始时间</li>
+<li>每个请求从开始到结束花费的时间</li>
+<li>每个请求的类型（文本、CSS、JS还是图片、字体）</li>
+<li>每个请求的状态码（200，frome Cache、304、404）</li>
+<li>每个请求产生的流量消耗</li>
+<li>每个请求gzip之前的体积和gzip之后的体积</li>
+</ul>
+</blockquote>
+<p>前端基本优化方法：</p>
+<blockquote>
+<ul>
+<li>尽量减少同一个域下的HTTP请求数：IE6/7和Firefox2对于同一个域能够发起两个并发连接，目前能够发起4到8个，如果需要更多连接就需要等到当前连接之后重新使用或者建立。</li>
+</ul>
+</blockquote>
+<p>静态资源可以放到其他域名下，当然只有一台服务器的话，可将几个域名指向同一个IP，但是需要担心服务器的压力。</p>
+<p>将静态资源放在非主域名下还能够不必要的cookie数据，例如cookie放在google.com的域名下那么对于google.com的所有请求都会带上cookie，对于静态资源完全没有必要。</p>
+<blockquote>
+<ul>
+<li>尽量减少每一个资源的体积</li>
+</ul>
+</blockquote>
+<p><strong>注意每种图片格式的使用场景</strong> </p>
+<p>对于较大的文本文件，开启gzip压缩，gzip优秀于压缩重复单词的文件</p>
+<blockquote>
+<p>对于一个CSS资源的请求耗时：</p>
+<ul>
+<li>请求资源体积以及压缩比</li>
+<li>连接建立时间与资源下载时间</li>
+</ul>
+</blockquote>
+<h4 id="后台视角"><a href="#后台视角" class="headerlink" title="后台视角"></a>后台视角</h4><p>让服务器尽快响应，减少请求对服务器的开销</p>
+<p>浏览器对于并发数的限制是为了保护服务器，而某些恶意客户端并不会限制。</p>
+<blockquote>
+<p>Apache 服务器使用模块化设计来适应各种环境。其中多处理模块用来处理多请求的情况。在不同系统上会调用不同的多处理模块，在UNIX上时prefork，为了优化可以改成worker</p>
+<p>prefork与worker模式的最大区别是prefork采用一个进程维持一个连接，而worker使用一个线程维持一个连接，prefork内存消耗大，但是很稳定。worker采用一个线程维持一个连接，一个线程崩溃可能导致相关进程和线程都挂掉，但是内存消耗明显减少，适合用在高HTTP请求的服务器上</p>
+<p>Apache与Nginx。高连接并发情况下，Nginx是Apache不错的替代和补充。Nginx更加轻量级。Nginx处理请求是异步非阻塞的，而Apache是阻塞的，在高并发情况下Nginx能保持低资源、低消耗、低阻塞</p>
+<p>Apache与Nginx各有所长，Nginx用处理前端并发而Apache处理后台请求</p>
+</blockquote>
+<p>DDOS攻击</p>
+<blockquote>
+<p>DDOS攻击使用肉鸡，攻击客户端并不限制连接数，而且每个连接不会马上断开。</p>
+<p>DDOS攻击防范：</p>
+<ul>
+<li>增加带宽，提高服务器能够同时接纳的客户数</li>
+<li>首页静态化。DDOS攻击者往往攻击有数据库操作的界面，这样的界面更加消耗资源。静态资源对服务器压力小，而且可以部署在CDN</li>
+</ul>
+<p>DDOS的类型：TCP/IP攻击、CC攻击、SYN攻击、NTP攻击、TCP攻击和DNS攻击</p>
+</blockquote>
+<p><strong>HTTP请求流程</strong></p>
+<blockquote>
+<p>客户端建立连接、服务器同意连接、客户端发起请求、服务端返回数据、客户端接受并处理数据</p>
+</blockquote>
+<p>HTTP阻塞模型中，用户感受到的延迟包括服务器生成页面的延迟、网络延迟以及页面渲染延迟</p>
+<blockquote>
+<ul>
+<li>HTTP底层是TCP/IP，需要三次握手才能建立连接。每个新增的请求都是重新建立连接。</li>
+<li>现有模型中，服务器端计算页面会生成整个页面才开始传输，三个部分都是阻塞式的</li>
+</ul>
+</blockquote>
+<p>阻塞模型中，服务器将页面相关数据一次产生好，然后通过response返回给浏览器，然后浏览器进行渲染。</p>
+<p>BigPipe</p>
+<blockquote>
+<p>BigPipe首先输送框架性的HTML结构，该结构定义每一个Pagelet模块的位置。传输完架构之后，服务器不断开连接，并告知浏览器先渲染。</p>
+</blockquote>
+<p>用户感知BigPipe是网页很快出现了，但是各个部分都在加载。</p>
+<p>BigPipe能够让服务器告知浏览器请求没结束，保持连接使用的是HTTP/1.1的分块传输编码。HTTP/1.1的分块传输允许服务器为动态生成的内容维持HTTP持久连接。体现在HTTP消息（请求或者应答）的Tranfer-Encoding，如果这个值为chunked，说明消息有数量不确定的块组成，最后以一个大小为0的块结束。</p>
+<p>除了IE，HTTP/2已默认开启，服务器可以向浏览器推送消息，多于浏览器的请求数，不需要等浏览器解析完HTML在请求CSS、JS直接复用之前的连接推送。</p>
+<h3 id="Web中的缓存问题，高性能网站的关键"><a href="#Web中的缓存问题，高性能网站的关键" class="headerlink" title="Web中的缓存问题，高性能网站的关键"></a>Web中的缓存问题，高性能网站的关键</h3><h4 id="服务器缓存"><a href="#服务器缓存" class="headerlink" title="服务器缓存"></a>服务器缓存</h4><p>数据库主要是开启查询缓存</p>
+<blockquote>
+<p>MySQL中默认不开启缓存，但可以通过修改my.ini来设置查询缓存，包括缓冲区大小以及单个缓冲区大小。</p>
+<p>MySQL缓存配置优化：</p>
+<p>query_cache_size = SIZE；配置缓冲区大小，为0 的时候表示禁用查询缓存</p>
+<p>query_cache_type = OPTION；三种缓存类型：</p>
+<ul>
+<li>0 不缓存也不从缓存中获取查询结果</li>
+<li>1 缓存除了以SELECT S_NO_CACHE开始的全部查询</li>
+<li>2 只缓存以SELECT SQL_CACHE开始的查询结果</li>
+</ul>
+<p>当对于数据的查询多于修改的时候，开启缓存是有效的。但是当数据库经常修改时，缓存频繁失效，此时效率反而降低。</p>
+<p>能够利用缓存，SQL语句的内容需要完全相同，如果一个有where，一个没有会重新从系统获取数据。针对不同的字段名也会重新解析。</p>
+</blockquote>
+<p>解决MySQL单点缓存的问题，升级解决方案memcached，可以数据库缓存配合</p>
+<blockquote>
+<p>memcached 高性能分布式内存对象缓存系统</p>
+<p>在数据库缓存设计中有一个原则：当某个表发生了更新操作，所有关于这个表的查询都会失效。为保证数据的时效性而较低命中率。</p>
+<p>memcached采用按时间来过期的设计</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&gt; st=&gt;start: 开始</div><div class="line">&gt; op=&gt;operation: Request Key from memcached</div><div class="line">&gt; cond=&gt;condition: Does key exist?</div><div class="line">&gt; op2=&gt;operation: 从数据库加载数据</div><div class="line">&gt; op3=&gt;operation: 更新memcached</div><div class="line">&gt; e=&gt;end: 使用数据</div><div class="line">&gt; st-&gt;op-&gt;cond</div><div class="line">&gt; cond(yes)-&gt;e</div><div class="line">&gt; cond(no)-&gt;op2-&gt;op3-&gt;e</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+<p>&gt;</p>
+<blockquote>
+<p>memcached储存的是键值对，只要设置的过期时间没到就会从memcached中获取查询结果，因此数据可能是不新鲜的</p>
+<p>WordPress可以使用memcached插件，但是在只有一台机器的情况下memcached反而会更慢，因为需要进行两次查询</p>
+</blockquote>
+<p>数据库缓存之上加一层文件缓存</p>
+<blockquote>
+<p>将频繁访问的数据放在文件中</p>
+<ul>
+<li>硬盘的容量比内存大</li>
+<li>数据安全，断电恢复</li>
+<li>易于扩展</li>
+</ul>
+<p>查找优先级：缓存-&gt;文件缓存-&gt;数据库</p>
+<p>PHP框Codelgniter的数据库缓存允许将结果放在文本文件中，只有读操作会产生结果集生成缓存文件，可以按照页面或者设置某些事件触发的缓存清除</p>
+</blockquote>
+<p>采用静态化来避免对于数据库的操作</p>
+<blockquote>
+<ul>
+<li>WordPress的静态化插件，每次有新的文章就生成新的静态页面，这个静态页面就相当于文件缓存。服务器收到页面请求直接返回静态页面。静态化减少了服务器的压力。</li>
+<li>完全抛弃数据库。jekyll让整个博客静态化，不用担心数据库服务器的问题。</li>
+</ul>
+</blockquote>
+<h4 id="浏览器缓存"><a href="#浏览器缓存" class="headerlink" title="浏览器缓存"></a>浏览器缓存</h4><p>浏览器设置资源缓存有两种方式：</p>
+<blockquote>
+<ul>
+<li>Expires：服务器会给返回的资源设置Expires，到日期之前都不需要重新获取，对于这种资源的请求会返回200（from cache），推荐所有的静态资源使用</li>
+<li>Last-Modified：服务器在返回资源中设置Last-Modified，浏览器将资源缓存。在下次请求命中资源时，浏览器请求中带有If-Modified-Since。如果没有修改，服务器返回304，如果修改了就正常返回200以及相关资源</li>
+</ul>
+</blockquote>
+<p>需要研究服务器的log确定304和200在一个合适的比例。尤其是对今天资源访问较多，而修改较少时使用Expires消除一波304</p>
+<h4 id="Restful-Web-API"><a href="#Restful-Web-API" class="headerlink" title="Restful Web API"></a>Restful Web API</h4><p>他是一种架构风格，定义如何正确地使用Web标准，包括：资源、集合、服务（URL）、get、post、put、delete操作。例如：当请求资源时，服务器上没有相关资源，应该返回404而不是200</p>
+<h4 id="HTTP-1-1-Cache-Control"><a href="#HTTP-1-1-Cache-Control" class="headerlink" title="HTTP/1.1 Cache-Control"></a>HTTP/1.1 Cache-Control</h4><p>Cache-Control设置了浏览器保存资源的时间、从浏览器收到资源后开始计时</p>
+<p>当设置了Expires，如何通知用户文件的变化呢？</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">http://server/program/path/?query_string</span></div></pre></td></tr></table></figure>
+<p>修改文件的QueryString也就是上例中问号后面的内容。QueryString会被服务器端的CGI或者应用程序理解。QueryString变化时浏览器认为是访问了一个新的资源。</p>
+<blockquote>
+<p><strong>浏览器缓存设置最佳实践</strong></p>
+<ul>
+<li>对于动态生成的页面HTTPS头中设置Cache-Control：no-cache</li>
+<li>对于静态界面HTTPS头中使用Last-Modified</li>
+<li>其他所有文件使用Expires并在文件内容修改时修改QueryString</li>
+</ul>
+</blockquote>
+<h4 id="浏览器缓存的实际情况"><a href="#浏览器缓存的实际情况" class="headerlink" title="浏览器缓存的实际情况"></a>浏览器缓存的实际情况</h4><p>服务器告知浏览器缓存策略，但是可能出现意外</p>
+<blockquote>
+<ul>
+<li>缓存被挤出：缓冲之间占用空间、用户清理等等，重新加载就好</li>
+<li>文件被运营商劫持：运营商在自己的节点上缓存了你的文件，并且在修改QueryString时，他仍有可能用自己的缓存滥竽充数</li>
+</ul>
+</blockquote>
+<p>当出现运营商劫持的时候，在QueryString之外还可以使用修改文件名的方法强制重新加载资源（这个当然用程序来统一实现）</p>
+<h3 id="大前端"><a href="#大前端" class="headerlink" title="大前端"></a>大前端</h3><p>前端知识体系：</p>
+<p>初级前端工程师：</p>
+<blockquote>
+<ul>
+<li>对于浏览器兼容性的了解</li>
+<li>对于三驾马车语法和原理的了解</li>
+<li>对于编辑器和插件的熟悉程度</li>
+<li>对调试工具的了解程度</li>
+<li>对版本管理软件的熟悉和应用经验</li>
+<li>对前端库/框架的使用</li>
+<li>标准/规范</li>
+</ul>
+</blockquote>
+<p>中级前端工程师：</p>
+<blockquote>
+<ul>
+<li>对代码质量、代码规范的了解</li>
+<li>对于JavaScript单元测试的了解</li>
+<li>对性能优化的应用和了解</li>
+<li>对SEO的应用和了解</li>
+<li>代码部署</li>
+<li>移动Web</li>
+</ul>
+</blockquote>
+<p>高级前端工程师：</p>
+<blockquote>
+<ul>
+<li>代码架构</li>
+<li>安全</li>
+<li>对自动化测试的了解</li>
+</ul>
+</blockquote>
+<p>越接近高级就会问对于某个点的本质了解，以及在项目和团队中的引导作用</p>
+<p>HTML的难点在于前端工程师实现了页面之后还需要考虑机器和盲人如何理解这个页面：需要语义化的标签。</p>
+<p>Markdown不会产生无意义的标签，不用关注样式而是更注重于内容本身，Markdown转换为HTML的方式有两种：</p>
+<blockquote>
+<ul>
+<li>在开发环境将Markdown转化为HTML，在发布到服务器上或者有服务器自动转化成HTML文件</li>
+<li>将Markdown发布到服务器上然后在用户访问HTML页面时有其中的JS代码将Markdown转换成HTML</li>
+</ul>
+</blockquote>
+<p>推荐第一种方式：不依赖浏览器端的JS运行，可用性好也便于SEO</p>
+<p><strong>还有zen-coding也就是emmet的转化方法可以去了解一下</strong></p>
+<h4 id="框架与库"><a href="#框架与库" class="headerlink" title="框架与库"></a>框架与库</h4><blockquote>
+<p>一个库是一系列的对象、方法等代码，而一个框架是一个软件之中可以重用的部分，包括子程序、库、胶水语言、图片等一些资源。框架可能包含多种语言，某些功能提供API的方式让主程序调用</p>
+</blockquote>
+<p><strong>当出现一些热门的框架式，建议开发者先去了解框架的创建初衷，合理使用而不是盲目收集，不要在一个简单的东西中引入一个庞然大物</strong></p>
+<p><strong>UI开发流程</strong></p>
+<blockquote>
+<ul>
+<li>UI工程师拿到需求单和设计稿，和App开发人员共同，有哪些需要重新做，哪些可以复用</li>
+<li>只是对界面的修改，无需改变逻辑的，UI修改资源和界面，然后提交测试</li>
+<li>新增的UI和逻辑，UI工程师与APP开发人员 约定双方沟通的API，UI在View中实现API细节，并在Controller中使用示例来demo API使用</li>
+</ul>
+</blockquote>
+<h3 id="向移动端转型"><a href="#向移动端转型" class="headerlink" title="向移动端转型"></a>向移动端转型</h3><h4 id="行动重于计划"><a href="#行动重于计划" class="headerlink" title="行动重于计划"></a>行动重于计划</h4><p>不要太多顾虑当前自己的优势劣势，而是应该尽早地行动起来。</p>
+<blockquote>
+<ul>
+<li>如果你不把自己的手弄脏，就没办法成为一个好外科医生</li>
+<li>自己给自己挠痒</li>
+</ul>
+</blockquote>
+<p><strong>一定要是自己产品的用户</strong></p>
+<p>移动端方向选择：</p>
+<blockquote>
+<ul>
+<li><p>iOS原生APP</p>
+</li>
+<li><p>Andriod原生APP</p>
+</li>
+<li><p>Windows Phone原生APP</p>
+</li>
+<li><p>Web APP：包括所有Web平台以及微信公众号</p>
+</li>
+<li><p>混合模式APP</p>
+<p>APP启动后，他的全部或者部分视图使用WebView来实现，常见的这种APP的优化方法如下：</p>
+<ul>
+<li>将WebView的部分或者所有资源打包在APP中，APP的体积会变大</li>
+<li>将需要加载的资源预先加载好：在启动的时候从后台下载需要的资源并存在手机的沙盒中，第一次访问比较久</li>
+<li>使用HTML5 Manifest技术实现资源缓存</li>
+<li>要结合原生技术和WebView各自的优势：不要完全依赖于WebView实现所有功能逻辑，包括页面切换，大量数据的页面等等</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p><strong>在使用WebView时需要学习WebView和原生代码之间通信</strong></p>
+<p>混合模式开发框架：PhoneGap</p>
+<blockquote>
+<p>PhoneGap对于各个平台进行封装并通过JS暴露出统一的API，但有一些缺点：</p>
+<ul>
+<li>编译出来的APP包比一般的要大很多</li>
+<li>PhoneGap应用的交互可能既不像苹果又不像安卓</li>
+<li>动画性能不佳，在有大数据量加载的页面表现地更明显</li>
+</ul>
+</blockquote>
+<p>PhoneGap适合于写一些小应用，应用UI交互不是很复杂的应用</p>
+<h3 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h3><p>版本控制的最佳实践：</p>
+<blockquote>
+<ul>
+<li>鼓励频繁地提交：创建一个分支然后在分支中频繁提交，不要在本地留下脏代码</li>
+<li>确定分支流程：基本上所有的特性和bug修复都应该使用分支来完成</li>
+<li>定义主干原则并坚守：主干对应的代码必须是可以发布并且不会产生bug的</li>
+<li>不要把修改逻辑和代码格式化混在一起，给代码格式化一个单独的提交，然后再去修改逻辑</li>
+<li>不相干的代码分开提交：不要在一次提交中修改两个Bug</li>
+<li>保持工作库的“干净”：将该忽略的忽略，善用.gitignore</li>
+</ul>
+</blockquote>
+<p>包管理（依赖管理）</p>
+<blockquote>
+<p>程序的原则：一个程序只做一件事并做好</p>
+</blockquote>
+<p><strong>npm</strong></p>
+<p>可以通过命令行或者package.json来下载依赖组件</p>
+<blockquote>
+<p>在package.json中的dependencies中写下袭来的模块和版本然后使用npm install就可以引入，模块会被放在node_modules文件夹中</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="string">"dependencies"</span>:&#123;</div><div class="line">  <span class="string">"gulp-util"</span>:<span class="string">"~2.2.14"</span>,</div><div class="line">   <span class="string">"through2"</span>:<span class="string">"~0.4.1"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>npm命令行使用示例如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install &lt;name&gt; [--save|--save-dev|--save-optional][--save-exact]</div></pre></td></tr></table></figure>
+<p>save说明这个依赖会出现在package.json的dependencies中，其余后面跟的后缀表示该配置包会出现在相关情况的dependencies配置中，<strong>最后一个参数暂时不知道意思</strong></p>
+<p><strong>Bower</strong></p>
+<p>用于管理各种前端资源，解决前端代码本地化所造成的更新困难。依赖树扁平。</p>
+<p>Bower使用Bower.json来进行依赖的定义，例如bootstrap对于jquery有依赖</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">"dependencies":&#123;"jquery":"&gt;=1.9.0"&#125;</div></pre></td></tr></table></figure>
+<p>然后运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bower install bootstrap</div></pre></td></tr></table></figure>
+<p>命令行就会提示依赖关系，虽然这里是层次形式显示的，但是最后他们会安装在同一个目录下</p>
+<p>与npm相比，Bower并没有自己的服务器来托管所有的包，直接运行在git，npm发布包会将包发布到registry.npmjs.org或者对应的镜像上，而Bower直接将一个包名绑定到一个git仓库，然后代码本身推送到Git仓库即可，操作示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Bower register mything Git://Github.com/username/mything.Git</div></pre></td></tr></table></figure>
+<p>Bower使用软件包的时候直接使用install命令即可，来源可以是注册名，用户名/项目名，Git库，或者URL</p>
+<p><strong>其他的包管理器：</strong> Composer（PHP），gem（ruby），CocoaPods（应用程序级别，Objective-C）</p>
+<p>版本号的规定</p>
+<blockquote>
+<p>V3.2.1</p>
+<p>3：主要版本号，API变更导致与旧版可能存在不兼容的情况变更</p>
+<p>2：次要版本号：新增功能但是向下兼容</p>
+<p>1：补丁：修复向前兼容的bug</p>
+</blockquote>
+<p>版本指定方法</p>
+<blockquote>
+<p>1.2.3,=1.2.3：指定版本为1.2.3</p>
+<p>> 1.2.3,&lt;1.2.3：大于/小于1.2.3</p>
+<p>>=1.2.3,&lt;=1.2.3</p>
+<p>1.2.3~2.3.4：大于1.2.3并且小于2.3.4</p>
+<p>~1.2.3：合理靠近1.2.3，等价于>1.2.3-0 &lt;1.3.0-0，1.3.0-beta就不满足这个条件</p>
+<p>~1.2：从1.2.0-0，&lt; 1.3.0-0</p>
+<p>~1：从1.0.0-0，&lt;2.0.0-0</p>
+<p>*：任意版本</p>
+</blockquote>
+<p>前端构建工具</p>
+<p>对外前端优化原则与对内前端开发的原则有一些不同，比如：合并CSS，不使用import，减少请求和阻塞等等。</p>
+<p>一面朝向浏览器：关注性能、缓存、较少重复、保持一致，一面朝向前端团队：关注维护、发布流程</p>
+<p><strong>前端项目架构原则</strong></p>
+<blockquote>
+<ul>
+<li>合适的分离粒度：将合适的组件提取出来，保持整体一致</li>
+<li>最小知识原则：一个组件或者对象不需要知道其他组件或者对象内部实现细节，比如将两个不同功能的组件分开</li>
+<li>DRY（Don’t Repeat Yourself）：特定的功能只在一个组件中实现，在其他组件中不应该有副本[严格要求]</li>
+<li>最小化预先设计，只设计必须的内容：为组件流程足够的地方，并不去考虑组件内部的实现</li>
+<li>通过良好的层级让文件易于找到，基于项目区分代码库或者为了共享组件采用扁平化的目录层级，看具体情况</li>
+<li>在代码层面，有一只且可执行的命名规则，从路径名到文件名有一致的前后缀、版本规则。整个团队有一致的命名风格和注释风格</li>
+</ul>
+</blockquote>
+<p><strong>Make</strong></p>
+<p>将大量的脚本命令组合起来放在一个makefile文件中，常用版本有BSD Make和GNU Make</p>
+<p>Make使用makefile列出需要执行的任务，每一个任务的依赖资源，以及怎么完成每一个任务。示例如下：</p>
+<blockquote>
+<p>a.txt: b.txt c.txt //说明a.txt是目标，需要b.txt以及c.txt作为前置条件</p>
+<p>​    cat b.txt c.txt &gt; a.txt //命令，以tab开始，然后是一句shell命令</p>
+</blockquote>
+<p>Make的基本模型是：在顶一把一个任务时，首先声明依赖关系，然后根据依赖，调用相应的程序和数据，生成目标文件。</p>
+<p>包管理也是根据依赖关系，将所有相关的软件包导入，所以依赖关系既属于包管理有属于构件工具</p>
+<p><strong>Grunt、Gulp</strong></p>
+<p>Grunt拥有众多插件：less，Sass，CoffeeScript等等，可以执行压缩、编译、单元测试、执行</p>
+<p>存在的问题：</p>
+<blockquote>
+<p>配置项过多，每一个插件的使用都需要配置输入项和输出项，使用比较繁琐</p>
+<p>子任务之间的协作基于文件。这使得后一个子任务必须等待前一个任务过程完全结束才能开始自己的流程</p>
+</blockquote>
+<p>Gulp：大口吸，基于流的构件工具，前一个任务的输出就是后一个任务的输入。没有多余的中间产物，不输出在磁盘</p>
+<h3 id="理解编程语言"><a href="#理解编程语言" class="headerlink" title="理解编程语言"></a>理解编程语言</h3><p>编译方式和解释方式，还有运行时编译JIT，保留了编译器的高性能，也有解释器的灵活，首次比较久，后面比较快</p>
+<p><strong>编程就是在和编程语言的设计者玩一个故事接龙的游戏，真正了解设计者的讲的故事，才能把自己的这一段故事讲好</strong></p>
+<p>Facebook 的PHP与C++，HipHop For PHP，将PHP编译成C++源码。语言的特性吸引用户，用户群会反过来影响和改变语言本身</p>
+<p>编译器和语言本身是两回事，同一个语言可能有不同的编译器实现，所以不能说A语言的效率比B语言高而是A语言的X编译器生成的代码比B语言Y编译器生成的代码更高效</p>
+<h4 id="全栈工程师最佳实践"><a href="#全栈工程师最佳实践" class="headerlink" title="全栈工程师最佳实践"></a>全栈工程师最佳实践</h4><p>GPL：通用解决方案语言，DSL：特定领域语言</p>
+<p>建议在发明创造新的DSL之前，首先：</p>
+<blockquote>
+<ul>
+<li>尽量使用自己熟悉的通用语言来解决问题</li>
+<li>优化自己的解决方案，真正精简、优雅的扩展库</li>
+<li>开源扩展库，根据其他人的贡献继续优化解决方案</li>
+<li>脚本语言包装器</li>
+<li>发明自己的DSL</li>
+</ul>
+</blockquote>
+<p>脚本语言的优势：</p>
+<blockquote>
+<ul>
+<li>脚本语言不需要编译</li>
+<li>脚本语言常常不用关心清理内存，这个事情由引擎干了</li>
+<li>脚本语言会针对特定领域做优化，比如PHP针对HTTP请求的优化</li>
+<li>脚本语言常常是动态类型语言</li>
+<li>脚本语言的抽象层次更高，更符合自然语言</li>
+<li>脚本语言有包管理器</li>
+</ul>
+</blockquote>
+<h3 id="全栈游乐场"><a href="#全栈游乐场" class="headerlink" title="全栈游乐场"></a>全栈游乐场</h3><p><strong>VPS</strong></p>
+<p>搭建自己的博客的步骤：</p>
+<blockquote>
+<ul>
+<li>初始化。操作系统啥的</li>
+<li>Apache或者其他服务器</li>
+<li>MySQL</li>
+<li>域名和路由，启动服务器，查看资源利用等等</li>
+<li>安全防护和设置自动备份</li>
+</ul>
+</blockquote>
+<p>VPS选择建议：</p>
+<blockquote>
+<ul>
+<li>内存一般是VPS的瓶颈，至少选择512MB的</li>
+<li>CPU相对没有那么重要</li>
+<li>硬盘的大小和读写速度是关键</li>
+<li>客户服务</li>
+</ul>
+</blockquote>
+<p>服务器安全</p>
+<blockquote>
+<ul>
+<li>新建普通用户，不使用root登录</li>
+<li>使用SSH的名值对登录，禁用用户名和密码的登录方法</li>
+<li>禁用root账户通过SSH登录</li>
+<li>安装一个防火墙</li>
+<li>安装Fail2Ban，杜绝字典攻击</li>
+</ul>
+</blockquote>
+<h3 id="软件设计方法"><a href="#软件设计方法" class="headerlink" title="软件设计方法"></a>软件设计方法</h3><p>设计模式的关注点在于：</p>
+<blockquote>
+<ul>
+<li>高效编写代码</li>
+<li>高可复用性</li>
+<li>抽象带来的可读性</li>
+</ul>
+</blockquote>
+<p><strong>创建型模式：</strong>对于创建对象的过程进行了封装，作为客户程序仅需要去使用对象，而不再关系创建对象过程中的逻辑</p>
+<p>JavaScript单例模式示例：</p>
+<p>需求：当用户点击网站的登录按钮时，会弹出一个输入框，同时背景出现一个半透明的黑色遮罩，生成遮罩的代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'button'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> mask = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">document</span>.body.appendChlid(<span class="built_in">document</span>.createElement(div))</div><div class="line">  &#125;</div><div class="line">  <span class="comment">//一般还要设置个样式啥的</span></div><div class="line">  mask.show();</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>以上代码在每次点击的时候都会创建一个新的div，显然是不合理的。使用单例的思想，创建之前首先检测是否存在，如果不存在就创建一个，代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> createMask = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> mask;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> mask||(mask = <span class="built_in">document</span>.body.appendChlid(<span class="built_in">document</span>.createElement(div));</div><div class="line">  &#125;</div><div class="line">&#125;();</div></pre></td></tr></table></figure>
+<p><em>在匿名函数的运行环境内，声明了局部变量mask，然后返回匿名函数，在这个函数对象创建时候会检查mask是否存在如果存在直接返回</em></p>
+<p>“惰性初始化”模式：推荐对象的创建、数据的计算等需要耗费较多资源的操作，只有在第一次访问的时候才执行。</p>
+<p><strong>结构型模式：</strong>结构型模式主要解决类、对象、模块之间的耦合关系，例如：用一个统一的接口，适配所有可能的情况，用于多人合作或者兼容旧版的接口</p>
+<p>其他结构型模式还有：桥接模式、组合模式、装饰模式、外观模式、享元模式和代理模式等</p>
+<p><strong>行为型模式：</strong>用来识别对象之间的交流模式并加以实现。</p>
+<p>观察者模式：在这种模式中，一个目标对象管理着所有依赖他的观察者对象，并在他本身状态发生改变时主动发出通知</p>
+<p>MVC架构中观察者模式也很常用，例如希望数据（Model）的变更可以被界面（View）察觉到。</p>
+<p><strong>架构模式：</strong> 教如何构建一个系统。关于以下两点：</p>
+<blockquote>
+<ul>
+<li>多个职位（前端、后台）可以平行工作同时进行</li>
+<li>构建一个软件系统的多种技术</li>
+</ul>
+</blockquote>
+<p>MVC模式：本质在于代码的分离，Controller是这个模式的核心，控制器更新数据，数据变化通知控制器；视图的用户操作被控制器拦截，控制器更新视图内容。</p>
+<p><strong>工程师的水平高低并不在于敲代码有多快（越快越好），复杂性多么高（解决问题就好），而是能够快速地理解其他工程师的代码并且自己编写的代码也能够让其他工程师理解</strong></p>
+<p><strong>设计原则</strong></p>
+<blockquote>
+<ul>
+<li>DRY：在一个系统里，对于任何数据或者变量，都应该配置在有且只有一个地方，其他的地方应该引用这里的数据，那么在改动数据的时候，只需要调整一处。与这个原则相关的还有三法原则，当代码重复出现的时候，考虑是不是要有子程序替代它，如果出现了三次以上那么就这么干。</li>
+<li>惯例优于设置：尽量减少需要配置的地方，此处举例PHP的Codeigniter的路由配置的例子</li>
+<li>KISS原则：大部分的系统设计越简单越好，有不必要的复杂性应该避免。如果一个系统非常复杂，就应该分解为多个简单地组件，做好足够的分解和抽象</li>
+<li>最少知道原则：松耦合原则的具体事例。每一个单元都应该只知道关于其他单元的有限信息。每一个单元都只有自己关系密切的单元讲话，不和陌生人讲话。每个单元都只暴露出少量的API，隐藏内部实现原理，重构类的时候只要API不变，就不会影响这个系统</li>
+</ul>
+</blockquote>
+<h3 id="高效工程师"><a href="#高效工程师" class="headerlink" title="高效工程师"></a>高效工程师</h3><p>Move fast, with Stable infra（快速行动，稳定架构）</p>
+<p><strong>提速100倍</strong></p>
+<blockquote>
+<ul>
+<li>阅读英文材料，使用英文进行搜索，stackoverflow，中文阮一峰的博客等 V2EX</li>
+<li>时间管理的四象限：如果平时没有做重要的事情，那么就会发现自己一直在做紧急的事情。<ul>
+<li>重要而紧急的事情，最好的判断力立即执行。但是要是一直重要而紧急就是在瞎忙</li>
+<li>紧急不重要的事情：首先看能不能请人代劳</li>
+<li>重要但是不紧急的事情，建议80%的时间放在这个象限里</li>
+<li>不重要不紧急的事情：逛论坛、看电视剧、玩游戏、刷朋友圈，基本就是浪费时间，不值得花时间。学会正确的休息。</li>
+</ul>
+</li>
+<li>消除重复工作：记录自己的时间花费，然后想着怎么去优化</li>
+<li>给自己留出不被打扰的时间：编写程序需要大量的精神投入，整块连续的时间很重要，也不要被自己想玩的想法打乱，坚持很重要。</li>
+<li>番茄工作法</li>
+<li>跨界思考：还能和整个项目中的产品、设计师等一起交流，要了解他们的思路</li>
+<li>纸上头脑风暴：写文章，写下关键词然后层层分解。写程序先把每一步要做的事情写下来，类似伪代码</li>
+<li>使用版本控制工具和构件系统</li>
+<li>尽量拒绝加班，提高自己的工作效率，注重工作的结果而不是工作的时间</li>
+</ul>
+</blockquote>
+<h3 id="学习设计"><a href="#学习设计" class="headerlink" title="学习设计"></a>学习设计</h3><p>工程师应该将设计与实现融合起来，给用户更好的体验。设计和工程师的分割不一定是最高效地解决方案。</p>
+<h4 id="设计基础"><a href="#设计基础" class="headerlink" title="设计基础"></a>设计基础</h4><p>我们需要去了解一些东西然后才能将其他东西和他关联起来</p>
+<p>设计的四大基本理论：亲密性、对齐、重复、对比</p>
+<blockquote>
+<ul>
+<li>亲密：关系亲密的元素要放在一起，关系疏远的元素则要分开。位置的亲密性直接表现出意义的亲密性</li>
+<li>对齐：左对齐、右对齐、上对齐、下对齐、斜线对齐、居中对齐</li>
+<li>重复：视觉上要使用重复的图形和元素、线条和颜色等。比如：QQ空间重复的使用黄色和黑色，微信的绿色，京东的红色。</li>
+<li>对比：如果两个元素（大小或者颜色）不一样，那就让他完全不一样，产生视觉冲击力</li>
+</ul>
+</blockquote>
+<p>设计理念会影响写代码和设计网站架构的方式：</p>
+<p>重复：提醒网站全局使用同样的加载图标</p>
+<p>设计稿中有两个颜色相近的元素，假定他们是同一颜色~</p>
+<p><strong>设计工具</strong></p>
+<p>处理与创作：处理是处理设计稿，photoshop与Fireworks；创作是使用自身技术优势创作一些设计师不擅长的东西，响应式页面，APP交互与动画，CSS3动画和滚动视差</p>
+<blockquote>
+<ul>
+<li>Axure：全部产品信息架构和功能，以页面为最小单位，输出整个网站的页面脉络以及每个页面的交互框架</li>
+<li>Sketch：轻量级设计工具，基于线框图增强设计感，但是好像是mac专用</li>
+<li>Quartz Composer：图形化编程工具，专门用来生成各种复杂和细腻的动态视觉效果，以及可交互的界面原型</li>
+<li>代码：用HTML/CSS实现响应式的高保真设计稿，然后放在云服务器上，给老板和客户看看意见</li>
+</ul>
+</blockquote>
+<h3 id="全栈思维"><a href="#全栈思维" class="headerlink" title="全栈思维"></a>全栈思维</h3><p>如果想拖延一件事，或者不想做一件事，总是能找到理由。懒惰的终极原因是想逃避这件事。</p>
+<p><strong>老板给您任务，根本不关心您有什么理由，只关心您完成没有</strong> 用诚恳的态度说明当前的进度以及未来能否如期完成，如果不能直接说出来</p>
+<p>在职场中，评估一个人不是根据他的能力，而是他所承担的责任。在能力不足、困难重重的时候，唯有投入大量的时间才能保住这珍贵的信任。</p>
+<p>新人没经验，知识不丰富，这都可以理解，但是以此为理由输出不合格的产品，就是自己的问题了</p>
+<p><strong>将自己的名字与自己的产品联系起来</strong></p>
+<p>沟通技能：</p>
+<blockquote>
+<p>对平级同事授权，最好的办法就是诉诸对方的利益，度己度人</p>
+<p>针对上司：要在20秒内让他知道您的目标</p>
+<ul>
+<li>汇报：求表扬</li>
+<li>请求：需要上司做事</li>
+<li>询问：上司对于某项任务的要求</li>
+</ul>
+</blockquote>
+<p><strong>金字塔原则</strong></p>
+<p>任何事情都可以归纳出一个中心论点，然后这个中心论点有3-7个论据，一级论据本身也可以是论点，然后再引出二级的论据支持。<strong>只能有一个中心目标，不能是两个。</strong></p>
+<p>表达自己的想法：</p>
+<blockquote>
+<p>无论想法多么复杂，经过多么复杂的推演，沟通的时候注意两点：一是让自己要表达的立场足够简单，二是围绕着唯一的立场去沟通</p>
+</blockquote>
+<p>书中的例子，减轻了汇报的部分，主要传达需要帮助的部分。说白了就是突出中心论点，给论点找论据，其他的提一下就好。</p>
+<p>示例：谈PPT</p>
+<blockquote>
+<ul>
+<li>不要有太多文字，让听众关注自己</li>
+<li>设定进度</li>
+<li>对待错误：放松</li>
+<li>录像对比，提高</li>
+</ul>
+</blockquote>
+<p>几个意识：</p>
+<blockquote>
+<ul>
+<li>自我意识：精准地察觉自己的情绪波动</li>
+<li>社会意识：能够感知周围人的情绪，并敏锐地捕捉到周围发生的事情</li>
+<li>自我管理：根据自身情绪，灵活地调控吱声行为</li>
+<li>关系管理：感知周遭的”情绪场“，掌控自我情绪并把握他人情绪，让双方进行更好地互动</li>
+</ul>
+</blockquote>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>终于整理完了这本书的读书笔记，以前读过一些书但是静下心来整理还是第一次。书中对于技术的介绍大多都是浅尝辄止的，但是拓宽了技术的视野，后续我想要提升的话还需要对于提到的技术都做一些实践。整理这个读书笔试是在新年的假期，我一直以为自己能在一天之内搞定，最后发现用了两整天的时间包括晚上，也是对于自己消耗时间经验的积累。最后我今年真的开始改变了，加油，坚持下去~</p>
+
       
     </div>
 

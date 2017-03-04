@@ -103,52 +103,6 @@
 <li>内存使用率差不多</li>
 </ul>
 </blockquote>
-<h3 id="WebP-使用建议"><a href="#WebP-使用建议" class="headerlink" title="WebP 使用建议"></a>WebP 使用建议</h3><blockquote>
-<ul>
-<li>图片色彩数影响WebP的压缩比率，256色以下，建议采用无损压缩</li>
-<li>大于256（表情图，广告图）可以选择高压缩比有损压缩（75%-100%）</li>
-<li>远大于256（风景图，视频截图）采用中压缩比有损压缩</li>
-<li>色温不影响图片的压缩效果，曲线和杂色参见色彩数对于图片的影响</li>
-<li>WebP不存在毛边问题，所以图片不用添加描边</li>
-</ul>
-</blockquote>
-<h3 id="动态WebP（Animated-WebP）"><a href="#动态WebP（Animated-WebP）" class="headerlink" title="动态WebP（Animated WebP）"></a>动态WebP（Animated WebP）</h3><p>和GIF一样，可以用于动画的制作</p>
-<blockquote>
-<ul>
-<li>支持有损压缩和无损压缩，并且可以合并有损和无损帧</li>
-<li>体积更小，将GIF转为有损Animated Webp可以减少64%体积，无损19%</li>
-<li>颜色更丰富，支持24-bit颜色和8-bit Alpha透明</li>
-<li>添加了关键帧，metadata等数据</li>
-</ul>
-</blockquote>
-<p>动态WebP同样是需要压缩解压时候的CPU消耗</p>
-<h3 id="综合技术方案"><a href="#综合技术方案" class="headerlink" title="综合技术方案"></a>综合技术方案</h3><p>如果你想用WebP，而目标平台的情况不明确的时候，可以这么做：</p>
-<blockquote>
-<ol>
-<li>若使用场景是浏览器，可以：<ul>
-<li>JavaScript 能力检测，对支持 WebP 的用户输出 WebP 图片-</li>
-<li>使用 WebP 支持插件：<a href="http://webpjs.appspot.com/" target="_blank" rel="external">WebPJS</a> ，我去使用时发现已经挂了</li>
-</ul>
-</li>
-<li>若使用场景是 App，可以：<ul>
-<li>Android 4.0 以下<a href="https://github.com/alexey-pelykh/webp-android-backport" target="_blank" rel="external"> WebP 解析库</a>，4.0以上原生支持-</li>
-<li>iOS <a href="https://github.com/carsonmcdonald/WebP-iOS-example" target="_blank" rel="external">WebP 解析库</a></li>
-</ul>
-</li>
-<li>转换工具：<ul>
-<li><a href="http://zhitu.tencent.com/" target="_blank" rel="external">智图</a> 我去使用的时候也挂了</li>
-<li><a href="http://isparta.github.io/" target="_blank" rel="external">iSparta</a></li>
-</ul>
-</li>
-</ol>
-</blockquote>
-<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a><strong>参考文献</strong></h3><p><a href="https://isux.tencent.com/introduction-of-webp.html" target="_blank" rel="external">https://isux.tencent.com/introduction-of-webp.html</a></p>
-<p><a href="http://en.wikipedia.org/wiki/WebP" target="_blank" rel="external">http://en.wikipedia.org/wiki/WebP</a></p>
-<p><a href="https://developers.google.com/speed/webp/" target="_blank" rel="external">https://developers.google.com/speed/webp/</a></p>
-<p><a href="http://tech.qq.com/a/20140721/074637.htm" target="_blank" rel="external">http://tech.qq.com/a/20140721/074637.htm</a></p>
-<p><a href="http://faso.me/slides/2014/webp/#/" target="_blank" rel="external">http://faso.me/slides/2014/webp/</a></p>
-<p><a href="http://www.webpagetest.org/video/compare.php?tests=141121_3W_JT7,141121_6Q_JSM" target="_blank" rel="external">http://www.webpagetest.org/video/compare.php?tests=141121_3W_JT7,141121_6Q_JSM</a></p>
-
       
     </div>
 

@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>NewGeneral&#39;s Blog | “求知若饥，虚心若愚”</title>
+
+  
+  <meta name="author" content="YunqingChen">
+  
+
+  
+  <meta name="description" content="以全栈工程师为目标，奋斗努力">
+  
+
+  
+  
+  <meta name="keywords" content="">
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  
+
+  <meta property="og:site_name" content="NewGeneral&#39;s Blog"/>
+
+  
+  <meta property="og:image" content="/favicon.ico"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="NewGeneral&#39;s Blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+</head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">NewGeneral&#39;s Blog</a>
+    </h1>
+    <p class="site-description">“求知若饥，虚心若愚”</p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+        <li><a href="/about">About</a></li>
+      
+        <li><a href="/categories">Categories</a></li>
+      
+        <li><a href="/tags">Tags</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
+    
+    <h3 class="article-title"><span></span></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2017/03/10/130. Surrounded Regions/" rel="bookmark">
+        <time class="entry-date published" datetime="2017-03-10T13:47:01.481Z">
+          2017-03-10
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <h2 id="130-Surrounded-Regions"><a href="#130-Surrounded-Regions" class="headerlink" title="130. Surrounded Regions"></a>130. Surrounded Regions</h2><h3 id="题目解读"><a href="#题目解读" class="headerlink" title="题目解读"></a>题目解读</h3><p>很类似于围棋将子围起来的规则，当’O’所围成的区域被’X’包围的时候，就将其中的’O’全部换成’X’,否则保留</p>
+<p>也就是说如果’O’连接的区域中如果有在棋盘边上的，这块’O’区域就保留。所以确定了这条题目属于搜索类的问题。</p>
+<h3 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a>思路分析</h3><p>题目中特殊的点就是在边上的点，所以决定从边上的点开始，找到所有含有边上点的区域，将这些区域中的’O’换个标记，例如：’L’，最后剩余没有替换的’O’换成’X’,’L’还原为’O’。</p>
+<a id="more"></a>
+<p>具体的做法分为深度优先和广度优先两种：</p>
+<p>深度优先的代码请参照<a href="http://www.cnblogs.com/grandyang/p/4555831.html" target="_blank" rel="external">[LeetCode] Surrounded Regions 包围区域</a></p>
+<p>我自己实现了广度优先的算法，首先是第一版的代码</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">struct</span> point &#123;</div><div class="line">	<span class="keyword">int</span> x;</div><div class="line">	<span class="keyword">int</span> y;</div><div class="line">	<span class="keyword">void</span> <span class="keyword">operator</span>= (<span class="keyword">const</span> point&amp; other) &#123;</div><div class="line">		x = other.x;</div><div class="line">		y = other.y;</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">class</span> Solution &#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt;&gt;&amp; board)</span> </span>&#123;</div><div class="line">		<span class="keyword">if</span> (board.empty())</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">return</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="comment">//BFS 队列</span></div><div class="line">		<span class="built_in">queue</span>&lt;point&gt; nextTarget;</div><div class="line">		<span class="comment">//BFS</span></div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; board.size();i++)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; board[<span class="number">0</span>].size();j++)</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">if</span> (i == <span class="number">0</span> || i == board.size() - <span class="number">1</span> || j == <span class="number">0</span> || j == board[<span class="number">0</span>].size() - <span class="number">1</span>)</div><div class="line">				&#123;</div><div class="line">					<span class="keyword">if</span> (board[i][j] == <span class="string">'O'</span>)</div><div class="line">					&#123;</div><div class="line">						board[i][j] = <span class="string">'L'</span>;</div><div class="line">						<span class="keyword">if</span> (i - <span class="number">1</span> &gt;= <span class="number">0</span> &amp;&amp; board[i<span class="number">-1</span>][j] == <span class="string">'O'</span>)</div><div class="line">						&#123;</div><div class="line">							point newTarget;</div><div class="line">							newTarget.x = i - <span class="number">1</span>;</div><div class="line">							newTarget.y = j;</div><div class="line">							nextTarget.push(newTarget);</div><div class="line">						&#125;</div><div class="line">						<span class="keyword">if</span> (i + <span class="number">1</span> &lt; board.size() &amp;&amp; board[i+<span class="number">1</span>][j] == <span class="string">'O'</span>)</div><div class="line">						&#123;</div><div class="line">							point newTarget;</div><div class="line">							newTarget.x = i + <span class="number">1</span>;</div><div class="line">							newTarget.y = j;</div><div class="line">							nextTarget.push(newTarget);</div><div class="line">						&#125;</div><div class="line">						<span class="keyword">if</span> (j - <span class="number">1</span> &gt;<span class="number">0</span> &amp;&amp; board[i][j<span class="number">-1</span>] == <span class="string">'O'</span>)</div><div class="line">						&#123;</div><div class="line">							point newTarget;</div><div class="line">							newTarget.x = i;</div><div class="line">							newTarget.y = j - <span class="number">1</span>;</div><div class="line">							nextTarget.push(newTarget);</div><div class="line">						&#125;</div><div class="line">						<span class="keyword">if</span> (j + <span class="number">1</span> &lt; board[<span class="number">0</span>].size() &amp;&amp; board[i][j+<span class="number">1</span>] == <span class="string">'O'</span>)</div><div class="line">						&#123;</div><div class="line">							point newTarget;</div><div class="line">							newTarget.x = i;</div><div class="line">							newTarget.y = j + <span class="number">1</span>;</div><div class="line">							nextTarget.push(newTarget);</div><div class="line">						&#125;</div><div class="line">						<span class="keyword">while</span> (!nextTarget.empty())</div><div class="line">						&#123;</div><div class="line">							point next = nextTarget.front();</div><div class="line">							nextTarget.pop();</div><div class="line">							board[next.x][next.y] = <span class="string">'L'</span>;</div><div class="line">							<span class="keyword">if</span> (next.x - <span class="number">1</span> &gt;= <span class="number">0</span> &amp;&amp; board[next.x<span class="number">-1</span>][next.y] == <span class="string">'O'</span>)</div><div class="line">							&#123;</div><div class="line">								point newTarget;</div><div class="line">								newTarget.x = next.x - <span class="number">1</span>;</div><div class="line">								newTarget.y = next.y;</div><div class="line">								nextTarget.push(newTarget);</div><div class="line">							&#125;</div><div class="line">							<span class="keyword">if</span> (next.x + <span class="number">1</span> &lt; board.size() &amp;&amp; board[next.x + <span class="number">1</span>][next.y] == <span class="string">'O'</span>)</div><div class="line">							&#123;</div><div class="line">								point newTarget;</div><div class="line">								newTarget.x = next.x + <span class="number">1</span>;</div><div class="line">								newTarget.y = next.y;</div><div class="line">								nextTarget.push(newTarget);</div><div class="line">							&#125;</div><div class="line">							<span class="keyword">if</span> (next.y - <span class="number">1</span> &gt; <span class="number">0</span> &amp;&amp; board[next.x][next.y<span class="number">-1</span>] == <span class="string">'O'</span>)</div><div class="line">							&#123;</div><div class="line">								point newTarget;</div><div class="line">								newTarget.x = next.x;</div><div class="line">								newTarget.y = next.y<span class="number">-1</span>;</div><div class="line">								nextTarget.push(newTarget);</div><div class="line">							&#125;</div><div class="line">							<span class="keyword">if</span> (next.y+<span class="number">1</span>&lt; board[<span class="number">0</span>].size() &amp;&amp; board[next.x][next.y+<span class="number">1</span>] == <span class="string">'O'</span>)</div><div class="line">							&#123;</div><div class="line">								point newTarget;</div><div class="line">								newTarget.x = next.x;</div><div class="line">								newTarget.y = next.y+<span class="number">1</span>;</div><div class="line">								nextTarget.push(newTarget);</div><div class="line">							&#125;</div><div class="line">						&#125;</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line"></div><div class="line">		&#125;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; board.size();i++)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; board[<span class="number">0</span>].size();j++)</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">if</span> (board[i][j] == <span class="string">'O'</span>)</div><div class="line">				&#123;</div><div class="line">					board[i][j] = <span class="string">'X'</span>;</div><div class="line">				&#125;</div><div class="line">				<span class="keyword">else</span> <span class="keyword">if</span> (board[i][j] == <span class="string">'L'</span>)</div><div class="line">				&#123;</div><div class="line">					board[i][j] = <span class="string">'O'</span>;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span>;</div><div class="line">	&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>代码的思路就是以边上的点为起点，广度优先搜索到所有与边上的点连通的’O’，将这些点换成’L’，最后在同一替换。但是这个代码在Oj的稍微复杂的用例时就超出时间。经过对运算过程的分析，发现是上述代码在从一个点添加它上下左右的领接点时，没有改变领接点的状态，这就可能让很多被重复添加到广度优先的搜索队列中造成重复计算，<strong>修改之后的代码在PUSH之前先修改了添加进来的点的状态，防止了重复添加</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">struct</span> point &#123;</div><div class="line">	<span class="keyword">int</span> x;</div><div class="line">	<span class="keyword">int</span> y;</div><div class="line">	<span class="keyword">void</span> <span class="keyword">operator</span>= (<span class="keyword">const</span> point&amp; other) &#123;</div><div class="line">		x = other.x;</div><div class="line">		y = other.y;</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">class</span> Solution &#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt;&gt;&amp; board)</span> </span>&#123;</div><div class="line">		<span class="keyword">if</span> (board.empty())</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">return</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="comment">//BFS 队列</span></div><div class="line">		<span class="built_in">queue</span>&lt;point&gt; nextTarget;</div><div class="line">		<span class="comment">//BFS</span></div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; board.size();i++)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; board[<span class="number">0</span>].size();j++)</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">if</span> (i == <span class="number">0</span> || i == board.size() - <span class="number">1</span> || j == <span class="number">0</span> || j == board[<span class="number">0</span>].size() - <span class="number">1</span>)</div><div class="line">				&#123;</div><div class="line">					<span class="keyword">if</span> (board[i][j] == <span class="string">'O'</span>)</div><div class="line">					&#123;</div><div class="line">						board[i][j] = <span class="string">'L'</span>;</div><div class="line">						<span class="keyword">if</span> (i - <span class="number">1</span> &gt;= <span class="number">0</span> &amp;&amp; board[i<span class="number">-1</span>][j] == <span class="string">'O'</span>)</div><div class="line">						&#123;</div><div class="line">							point newTarget;</div><div class="line">							newTarget.x = i - <span class="number">1</span>;</div><div class="line">							newTarget.y = j;</div><div class="line">							nextTarget.push(newTarget);</div><div class="line">							board[i - <span class="number">1</span>][j] = <span class="string">'L'</span>;</div><div class="line">						&#125;</div><div class="line">						<span class="keyword">if</span> (i + <span class="number">1</span> &lt; board.size() &amp;&amp; board[i+<span class="number">1</span>][j] == <span class="string">'O'</span>)</div><div class="line">						&#123;</div><div class="line">							point newTarget;</div><div class="line">							newTarget.x = i + <span class="number">1</span>;</div><div class="line">							newTarget.y = j;</div><div class="line">							nextTarget.push(newTarget);</div><div class="line">							board[i + <span class="number">1</span>][j] = <span class="string">'L'</span>;</div><div class="line">						&#125;</div><div class="line">						<span class="keyword">if</span> (j - <span class="number">1</span> &gt;<span class="number">0</span> &amp;&amp; board[i][j<span class="number">-1</span>] == <span class="string">'O'</span>)</div><div class="line">						&#123;</div><div class="line">							point newTarget;</div><div class="line">							newTarget.x = i;</div><div class="line">							newTarget.y = j - <span class="number">1</span>;</div><div class="line">							nextTarget.push(newTarget);</div><div class="line">							board[i][j<span class="number">-1</span>] = <span class="string">'L'</span>;</div><div class="line">						&#125;</div><div class="line">						<span class="keyword">if</span> (j + <span class="number">1</span> &lt; board[<span class="number">0</span>].size() &amp;&amp; board[i][j+<span class="number">1</span>] == <span class="string">'O'</span>)</div><div class="line">						&#123;</div><div class="line">							point newTarget;</div><div class="line">							newTarget.x = i;</div><div class="line">							newTarget.y = j + <span class="number">1</span>;</div><div class="line">							nextTarget.push(newTarget);</div><div class="line">							board[i][j + <span class="number">1</span>] = <span class="string">'L'</span>;</div><div class="line">						&#125;</div><div class="line">						<span class="keyword">while</span> (!nextTarget.empty())</div><div class="line">						&#123;</div><div class="line">							point next = nextTarget.front();</div><div class="line">							nextTarget.pop();</div><div class="line">							board[next.x][next.y] = <span class="string">'L'</span>;</div><div class="line">							<span class="keyword">if</span> (next.x - <span class="number">1</span> &gt;= <span class="number">0</span> &amp;&amp; board[next.x<span class="number">-1</span>][next.y] == <span class="string">'O'</span>)</div><div class="line">							&#123;</div><div class="line">								point newTarget;</div><div class="line">								newTarget.x = next.x - <span class="number">1</span>;</div><div class="line">								newTarget.y = next.y;</div><div class="line">								nextTarget.push(newTarget);</div><div class="line">								board[next.x - <span class="number">1</span>][next.y] = <span class="string">'L'</span>;</div><div class="line">							&#125;</div><div class="line">							<span class="keyword">if</span> (next.x + <span class="number">1</span> &lt; board.size() &amp;&amp; board[next.x + <span class="number">1</span>][next.y] == <span class="string">'O'</span>)</div><div class="line">							&#123;</div><div class="line">								point newTarget;</div><div class="line">								newTarget.x = next.x + <span class="number">1</span>;</div><div class="line">								newTarget.y = next.y;</div><div class="line">								nextTarget.push(newTarget);</div><div class="line">								board[next.x + <span class="number">1</span>][next.y] = <span class="string">'L'</span>;</div><div class="line">							&#125;</div><div class="line">							<span class="keyword">if</span> (next.y - <span class="number">1</span> &gt; <span class="number">0</span> &amp;&amp; board[next.x][next.y<span class="number">-1</span>] == <span class="string">'O'</span>)</div><div class="line">							&#123;</div><div class="line">								point newTarget;</div><div class="line">								newTarget.x = next.x;</div><div class="line">								newTarget.y = next.y<span class="number">-1</span>;</div><div class="line">								nextTarget.push(newTarget);</div><div class="line">								board[next.x][next.y - <span class="number">1</span>] = <span class="string">'L'</span>;</div><div class="line">							&#125;</div><div class="line">							<span class="keyword">if</span> (next.y+<span class="number">1</span>&lt; board[<span class="number">0</span>].size() &amp;&amp; board[next.x][next.y+<span class="number">1</span>] == <span class="string">'O'</span>)</div><div class="line">							&#123;</div><div class="line">								point newTarget;</div><div class="line">								newTarget.x = next.x;</div><div class="line">								newTarget.y = next.y+<span class="number">1</span>;</div><div class="line">								nextTarget.push(newTarget);</div><div class="line">								board[next.x][next.y + <span class="number">1</span>] = <span class="string">'L'</span>;</div><div class="line">							&#125;</div><div class="line">						&#125;</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line"></div><div class="line">		&#125;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; board.size();i++)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; board[<span class="number">0</span>].size();j++)</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">if</span> (board[i][j] == <span class="string">'O'</span>)</div><div class="line">				&#123;</div><div class="line">					board[i][j] = <span class="string">'X'</span>;</div><div class="line">				&#125;</div><div class="line">				<span class="keyword">else</span> <span class="keyword">if</span> (board[i][j] == <span class="string">'L'</span>)</div><div class="line">				&#123;</div><div class="line">					board[i][j] = <span class="string">'O'</span>;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span>;</div><div class="line">	&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+  
+	<div id="comment">
+		
+	<!-- 多说评论框 start -->
+	 <div class="ds-thread" data-thread-key="/2017/03/10/130. Surrounded Regions/" data-title="" data-url="http://yoursite.com/2017/03/10/130. Surrounded Regions/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"newgeneral"};
+	  (function() {
+	    var ds = document.createElement('script');
+	    ds.type = 'text/javascript';ds.async = true;
+	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	    ds.charset = 'UTF-8';
+	    (document.getElementsByTagName('head')[0]
+	     || document.getElementsByTagName('body')[0]).appendChild(ds);
+	  })();
+	  </script>
+	<!-- 多说公共JS代码 end -->
+
+	</div>
+
+
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    </br>
+    
+    &copy; 2017 YunqingChen
+    
+  </p>
+</footer>
+    
+  </div>
+</div>
+</body>
+</html>
